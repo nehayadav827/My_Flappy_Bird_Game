@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Main game container that holds the bird and obstacles -->
+    <div id="game-container">
+        
+<div id="credit-text">Made by Neha Yadav</div>
+
+         <div id="score-display">Score: 0</div>
+
+ <!-- The bird element that the player controls -->
+        <div id="bird">
+            <img src="greenbird.png" alt="bird">
+        </div>
+
+        <!-- Pipe obstacles - positioned using CSS -->
+
+        <div class="pipe" style="height: 200px; top: 0; left: 400px"></div>
+         <!-- game m toh nhi lag rha ki ye ek height 200px and and ek 300 -->
+        <div class="pipe" style="height: 300px; top: 400px; left: 1000px"></div>
+    </div>
+
+    <!-- Game controls instruction -->
+    <div id="instructions">
+        <p>Press any key to make the bird jump and avoid the pipes!</p>
+    </div>
+
+    <!-- Load the game logic -->
+    <script src="script.js"></script>
+</body>
+
+</html>

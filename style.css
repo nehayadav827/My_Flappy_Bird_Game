@@ -1,0 +1,90 @@
+/* Reset default browser styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color:black; /* light grey background */
+  font-family: Arial, sans-serif;
+}
+
+/* Main game area container */
+#game-container {
+  position: relative;
+  width: 90vw;  /*90 percent of viewport width*/
+  height: 90vh;
+  background-color: #fff; /* White game background */
+  overflow: hidden; /* Hide elements that go outside the container */
+  margin: 30px auto; /* Center the game horizontally */
+  /* extra code added to set a background image */
+  background-image: url('Flappy\ Bird\ Background.jpg');   /*  Set background image */
+  background-size: cover;                    /*  Stretch image to fill */
+  background-position: center;               /*  Center it */
+  background-repeat: no-repeat
+}
+
+#score-display {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 32px;
+  font-weight: bold;
+  color: black;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  z-index: 100; /* ensures it’s always visible above pipes and bird */
+  pointer-events: none; /* so clicks or key presses pass through */
+}
+
+/* The player-controlled bird */
+#bird {
+   /* let the bird float on top of the game's background */
+  position: absolute;
+  width: 60px;
+  height: 60px;
+
+  /* push 10px left of the container */
+  margin-left: 10px;
+/* removing background color so that image can be seen  */
+  /* background-color: red; 
+  red bird */
+  border-radius: 50%; /* Make it circular */
+}
+
+#bird img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Pipe obstacles that the bird must avoid */
+.pipe {
+  position: absolute;
+  width: 60px;
+  background-color: #228b22; /* Forest green pipes */
+  outline: none;
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Game instructions styling */
+#instructions {
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+}
+
+#instructions p {
+  font-size: 16px;
+  margin: 0;
+}
+
+#credit-text {
+  position: absolute;
+  bottom: 20px;      /* distance from bottom */
+  right: 20px;       /* distance from right */
+  font-size: 20px;   /*  text size */
+  color: rgb(3, 69, 31);      /* visible against background */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7); /* optional for readability */
+  z-index: 10;       /* ensures it stays on top */
+  pointer-events: none; /* doesn’t block clicks or key presses */
+  font-family: Arial, sans-serif;
+}
